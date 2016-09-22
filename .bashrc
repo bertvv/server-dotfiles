@@ -2,7 +2,7 @@
 
 ## Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+  . /etc/bashrc
 fi
 
 ## User specific aliases and functions
@@ -31,3 +31,14 @@ alias lh='ls -lh  --si --time-style=long-iso --color'
 alias tree='tree -AC'
 alias Z='ls -l -Z --si --color'
 
+# Try to attach to any existing Tmux session
+attach_tmux() {
+  if [ -z "${TMUX}" ]; then
+    session_name="$(whoami)"
+    if tmux has-session -t "${session_name}" 2> /dev/null; then
+      tmux -2 attach-session -t "${session_name}"
+    else
+      tmux -2 new-session -s "${session_name}"
+    fi
+  fi
+}
