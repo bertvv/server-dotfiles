@@ -17,8 +17,8 @@ This repo contains configuration files for basic tools like Bash, Vim, Tmux, ...
     $ git remote add -t \* -f origin https://github.com/bertvv/server-dotfiles.git
     ```
 
-4. Get the files
+4. Get the files (overwrites any existing dotfiles)
 
     ```console
-    $ git checkout master
+    $ git checkout --force master
     ```
