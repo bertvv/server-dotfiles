@@ -39,7 +39,8 @@ main() {
 # Prints out the plugin url
 get_plugin_urls() {
   if [ ! -f "${plugins}" ]; then
-    die "File listing plugins (${plugins}) not found.\nCreate it and enter the Github repo urls of plugins to be installed"
+    die "File listing plugins (${plugins}) not found.
+Create it and enter the Github repo urls of plugins to be installed"
   fi
   cat "${plugins}"
 }
