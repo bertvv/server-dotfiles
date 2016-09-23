@@ -1,0 +1,29 @@
+"==========================================================
+" Vim configuration
+"==========================================================
+
+"----------------------------------------------------------
+" General settings
+"----------------------------------------------------------
+
+" Pathogen plugin manager
+execute pathogen#infect()
+
+"----------------------------------------------------------
+" Plugin settings
+"----------------------------------------------------------
+
+"--- Vim Markdown ---
+let g:vim_markdown_folding_disabled=1
+
+"--- Vimwiki ---
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.markdown'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown',
+            \ '.markdown': 'markdown',
+            \ '.mkd': 'markdown',
+            \ '.wiki': 'media'}
+
+"--- Syntastic ---
+let g:syntastic_ruby_checkers=['mri', 'rubocop']
+
+
