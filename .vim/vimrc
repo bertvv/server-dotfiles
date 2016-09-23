@@ -10,6 +10,61 @@
 execute pathogen#infect()
 
 "----------------------------------------------------------
+" Editor settings
+"----------------------------------------------------------
+
+" Enable mouse support
+set mouse=a
+
+" Display line numbers
+set number
+
+" Indentation: two spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+set shiftround
+
+" Case insensitive search, except when writing capitals
+set ignorecase
+set smartcase
+set incsearch
+
+" Command completion
+set wildmenu
+set wildmode=longest:full
+set wildmode+=full
+
+" ignore case when completing filenames
+if exists("&wildignorecase")
+  set wildignorecase
+endif
+
+" Shell scripts with /bin/sh are POSIX compliant shells instead of original
+" Bourne
+let g:is_posix = 1
+
+"----------------------------------------------------------
+" GUI settings
+"----------------------------------------------------------
+
+" Highlight trailing whitespace and TAB characters
+" source: http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t\|\t/
+
+"----------------------------------------------------------
+" Keyboard shortcuts
+"----------------------------------------------------------
+
+" Set the <Leader> key to comma (instead of backslash)
+let mapleader = ","
+
+
+"----------------------------------------------------------
 " Plugin settings
 "----------------------------------------------------------
 
