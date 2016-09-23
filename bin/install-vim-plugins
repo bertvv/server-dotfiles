@@ -86,7 +86,6 @@ log() {
 # Prints a message to stderr and exits with a nonzero exit status
 die() {
   printf "Error: %s ${*}\n" 1>&2
-  usage
   exit 1
 }
 
