@@ -30,3 +30,5 @@ This repo contains configuration files for basic tools like Bash, Vim, Tmux, ...
     ```
 
     If you want to add a Vim plugin, add the Github URL to the file `~/.vim/bundle/plugins` and run the script again.
+
+6. To download newer versions of these configuration files, just run `git pull` in your home directory.
