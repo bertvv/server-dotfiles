@@ -14,7 +14,9 @@ set -o pipefail
 #}}}
 #{{{ Variables
 IFS=$'\t\n'   # Split on newlines and tabs (but not on spaces)
-
+YELLOW='\e[0;33m'
+RED='\e[0;31m'
+RESET='\e[0m'
 
 # Vim configuration dir
 readonly vim_home="${HOME}/.vim"
@@ -78,14 +80,14 @@ clone_git_repo() {
 #
 # Prints a message to stdout
 log() {
-  printf "%s ${*}\n"
+  printf "${YELLOW}%s${RESET}\n" "${*}"
 }
 
 # Usage: die MESSAGE
 #
 # Prints a message to stderr and exits with a nonzero exit status
 die() {
-  printf "Error: %s ${*}\n" 1>&2
+  printf "${RED}Error: %s${RESET}\n" "${*}" 1>&2
   exit 1
 }
 
