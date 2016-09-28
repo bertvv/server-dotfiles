@@ -52,9 +52,6 @@ set positionlog
 ## sentences.
 set punct "!.?"
 
-## Fix Backspace/Delete confusion problem.
-set rebinddelete
-
 ## Fix numeric keypad key confusion problem.
 set rebindkeypad
 
